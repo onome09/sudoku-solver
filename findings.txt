@@ -1,0 +1,20 @@
+Summarise your findings here (see specification).
+
+Given the three mystery sudoku boards, the sudoku solver was run on each of the three boards.      
+A solution was found for mystery1 and mystery3, indicating that mystery2 was in fact unsolvable. For further anlysis, the number of solver iterations was recorded. This was done by declaring a global variable called iterations, and incrementing this variable as soon as an attempt was made to place a number in a square of the sudoku board. This allowed tus to see the difference in how many times the solver tried before it found a solution. The execution time for solving each sudoku board was found by using including c.time libray and recording the time taken in milliseconds for the solver to find a solution for each board.  
+
+
+    	       Execution_time    	Number_of   	    Solved?
+	       (milliseconds)   	Iterations
+
+easy.dat	1			19337			Yes			
+
+medium.dat	12			140743			Yes
+
+mystery1.dat	284			3793687			Yes
+
+mystery2.dat	10			103797			No	
+
+mystery3.dat	8			126954			Yes
+
+Mystery 1 had the highest execution time of 307 milliseconds and needed about 3.8 million iterations to solve suggesting it was the hard sudoku board. Mystery3 had an execution time of 9 which is similar to the execution time of the easy board that was given. This implies that mystery3 was the easy board. As the solver found no solution for mystery2 it can be concluded that this was the sudoku board that was impossible to solve.
